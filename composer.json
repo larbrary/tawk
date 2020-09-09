@@ -1,0 +1,48 @@
+{
+    "name": "larbrary/tawk",
+    "description": "Website chat widget (tawk.to integration for Laravel).",
+    "type": "laravel-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "LarBrary",
+            "homepage": "https://github.com/larbrary"
+        }
+    ],
+    "homepage": "https://github.com/larbrary/tawk",
+    "keywords": ["tawk-to", "tawk.to", "tawkto", "tawk to", "tawk", "website chat", "support chat", "chat", "chat widget", "widget", "laravel"],
+    "require": {
+        "php": ">=5.6.0",
+        "illuminate/support": "~5|~6|~7",
+        "illuminate/view": "~5|~6|~7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3|~4",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Larbrary\\Tawk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Larbrary\\Tawk\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Larbrary\\Tawk\\TawkServiceProvider"
+            ],
+            "aliases": {
+                "Tawk": "Larbrary\\Tawk\\Facades\\Tawk"
+            }
+        }
+    },
+    "scripts": {
+        "test": "rm -rf vendor/orchestra && composer install  && vendor/bin/phpunit"
+    }
+}
