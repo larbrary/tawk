@@ -31,7 +31,7 @@ class Tawk
                 'Tawk_API.visitor = {' .
                 'name: "' . auth()->user()->name . '",' .
                 'email: "' . auth()->user()->email . '",' .
-                'hash: "' . hash_hmac("sha256", auth()->user()->email, config("tawk.api_key")) . '"' .
+                'hash: "' . hash_hmac("sha256", auth()->user()->email, $api_key) . '"' .
                 '};';
         }
         $js_code .=

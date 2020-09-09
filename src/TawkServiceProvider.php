@@ -41,7 +41,7 @@ class TawkServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/tawk.php', 'tawk');
 
         // Register the service the package provides.
-        $this->app->singleton('tawk', function ($app) {
+        $this->app->singleton('tawk', function () {
             return new Tawk;
         });
     }
@@ -66,6 +66,6 @@ class TawkServiceProvider extends ServiceProvider
         // Publishing the configuration file.
         $this->publishes([
             __DIR__.'/../config/tawk.php' => config_path('tawk.php'),
-        ], 'tawk.config');
+        ], 'config');
     }
 }

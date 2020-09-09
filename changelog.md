@@ -6,3 +6,8 @@ All notable changes to `Tawk` will be documented in this file.
 
 ### Added
 - Everything ( initial release )
+
+## Version 1.0.1
+
+### Added
+- Laravel 8 support ( version bump )
