@@ -66,6 +66,6 @@ class TawkServiceProvider extends ServiceProvider
         // Publishing the configuration file.
         $this->publishes([
             __DIR__.'/../config/tawk.php' => config_path('tawk.php'),
-        ], 'config');
+        ], 'tawk-config');
     }
 }

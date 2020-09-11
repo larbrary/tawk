@@ -11,6 +11,7 @@ phpunit.xml
 *.DS_store
 .idea/*
 .php_cs.cache
+.styleci.yml
 docs/api
 phpDocumentor.phar*
 .phpunit.result.cache

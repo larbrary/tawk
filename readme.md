@@ -30,25 +30,29 @@ Laravel 5.5+ will use the auto-discovery function but for Laravel 5.4 and lower,
 
 ## Config
 
-In the `.env` file, set the Property ID. For example, if the Direct Chat Link is `https://embed.tawk.to/XXXXXXX/default`, the `.env` file should have the following:
+In the `.env` file, set the Property ID. For example, if the Direct Chat Link is `https://embed.tawk.to/XXXXXXX/default`, the `.env` file should contain the following:
 
 ```ini
 TAWK_TO_PROPERTY_ID=XXXXXXX
 ```
 
-If you're not using the `default` chat widget, provide a Widget ID. For example, if the Direct Chat Link is `https://embed.tawk.to/XXXXXXX/5bc4ae1275bef`, the `.env` file should have the following:
+If you're not using the `default` chat widget, provide a Widget ID. For example, if the Direct Chat Link is `https://embed.tawk.to/XXXXXXX/5bc4ae1275bef`, the `.env` file should contain the following:
 
 
 ```ini
 TAWK_TO_WIDGET_ID=5bc4ae1275bef
 ```
 
-`TAWK_API_KEY` is only needed for automatically registering authenticated users with the tawk chat client:
+If you're using the `TAWK_API_KEY` ( only needed for automatically registering authenticated users with the tawk chat client ), the `.env` file should contain the following:
 
 ```ini
 TAWK_TO_API_KEY=your_tawk_api_key_goes_here
 ```
 
+After making changes in the `.env` file, you might need to clear the compiled views:
+```shell script
+php artisan view:clear
+```
 
 ## Usage
 Simply use `@tawk` in your blade layout file just before the body closing tag ( `</body>` ):
@@ -68,9 +72,10 @@ Simply use `@tawk` in your blade layout file just before the body closing tag ( 
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
 
+
 ## Testing
 
-``` bash
+``` shell script
 $ composer test
 ```
 
