@@ -46,8 +46,6 @@ class TawkTest extends TestCase
     /** @test */
     public function it_compiles_the_blade_directive_with_api_key_and_authenticated_user()
     {
-        $this->artisan('migrate')->run();
-
         $test_user = new TestUser([
             'name' =>  'Test Name',
             'email' => 'test@email.com'
