@@ -21,3 +21,8 @@ All notable changes to `Tawk` will be documented in this file.
 
 ### Changes
 - Typo correction
+
+## Version 1.0.4
+
+### Changes
+- Update phpunit config xml file.
