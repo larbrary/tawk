@@ -1,5 +1,5 @@
 name: Workflow tests for Codecov
-on:[push]
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
