@@ -15,8 +15,6 @@ jobs:
           key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
       - name: Composer Dependencies
         run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
-      - name: Lint
-        run: composer lint
       - name: Unit Tests
         run: composer test
       - name: Codecov
